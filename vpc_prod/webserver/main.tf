@@ -1,3 +1,17 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 4.0.0"
+    }
+  }
+  required_version = ">= 1.5.0"
+}
+
+provider "aws" {
+  region = "us-east-1"  # Replace with your desired AWS region
+}
+
 data "terraform_remote_state" "Prod_vpc" {
   backend = "s3"
   config = {
