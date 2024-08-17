@@ -1,55 +1,55 @@
 output "vpc_id" {
-  value = aws_vpc.VPC.id
+  value = module.Prod_vpc.vpc_id
 }
 
 output "public_subnet1_id" {
-  value = aws_subnet.subnet_1_public.id
+  value = module.Prod_vpc.public_subnet1_id
 }
 
 output "public_subnet2_id" {
-  value = aws_subnet.subnet_2_public.id
+  value = module.Prod_vpc.public_subnet2_id
 }
 
 output "public_subnet3_id" {
-  value = aws_subnet.subnet_3_public.id
+  value = module.Prod_vpc.public_subnet3_id
 }
 
 output "public_subnet4_id" {
-  value = aws_subnet.subnet_4_public.id
+  value = module.Prod_vpc.public_subnet4_id
 }
 
 output "private_subnet1_id" {
-  value = aws_subnet.subnet_1_private.id
+  value = module.Prod_vpc.private_subnet1_id
 }
 
 output "private_subnet2_id" {
-  value = aws_subnet.subnet_2_private.id
+  value = module.Prod_vpc.private_subnet2_id
 }
 
 output "bastionsg_id" {
-  value = aws_security_group.sg_bastion.id
+  value = module.Prod_vpc.bastionsg_id
 }
 
 output "privatesg_id" {
-  value = aws_security_group.sg_private.id
+  value = module.Prod_vpc.privatesg_id
 }
 
 output "public_routetable_id" {
-  value = aws_route_table.public_route.id
+  value = module.Prod_vpc.public_routetable_id
 }
 
 output "private_routetable_id" {
-  value = aws_route_table.private_route.id
+  value = module.Prod_vpc.private_routetable_id
 }
 
 output "internetgateway_id" {
-  value = aws_internet_gateway.MyIGW.id
+  value = module.Prod_vpc.internetgateway_id
 }
 
 output "natgateway_id" {
-  value = aws_nat_gateway.MyNAT.id
+  value = module.Prod_vpc.natgateway_id
 }
 
 output "vpc_cidr" {
-  value = aws_vpc.VPC.cidr_block
+  value = module.Prod_vpc.vpc_cidr
 }
