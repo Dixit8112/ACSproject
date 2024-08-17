@@ -22,7 +22,7 @@ output "publicVM3_ip" {
   value = aws_instance.publicVM3.public_ip
 }
 
-output "publicVM4_ip" {
+outputs "publicVM4_ip" {
   value = aws_instance.publicVM4.public_ip
 }
 
